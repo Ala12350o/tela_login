@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+  }
+  
+  input:focus {
+    border-color: #4a90e2;
+    outline: none;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background: #357abd;
+  }
+  
+  #password-strength {
+    height: 6px;
+    border-radius: 5px;
+    margin-top: 8px;
+    transition: 0.3s;
+  }
+  
+  .captcha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .captcha label {
+    background: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    user-select: none;
+    border: 1px solid #ccc;
+  }
+  
+  #error-message {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    min-height: 18px;
+  }
+  
+  .register-text {
+    text-align: center;
+    margin-top: 10px;
+  }
