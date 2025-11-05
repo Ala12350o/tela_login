@@ -3,36 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tela de Login</title>
-  <link rel="stylesheet" href="index.css" />
+  <title>Login e Cadastro</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
-  <div class="login-container">
-    <h1>Login</h1>
-    <form id="loginForm">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" required placeholder="Digite seu email" />
-      </div>
+  <div class="container">
 
-      <div class="form-group">
-        <label for="password">Senha</label>
-        <input type="password" id="password" required placeholder="Digite sua senha" />
-        <div id="password-strength"></div>
-      </div>
+    <!-- TELA DE LOGIN -->
+    <div class="form-box" id="loginBox">
+      <h2>Entrar</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" id="loginEmail" placeholder="Digite seu email" required />
+        </div>
+        <div class="input-group">
+          <label>Senha</label>
+          <input type="password" id="loginPassword" placeholder="Digite sua senha" required />
+        </div>
+        <div class="g-recaptcha" data-sitekey="https://www.google.com/recaptcha/admin/create"></div>
+        <p id="loginError" class="error"></p>
+        <button type="submit">Entrar</button>
+      </form>
+      <p>Não tem conta? <a href="#" id="toRegister">Cadastre-se</a></p>
+    </div>
 
-      <div class="form-group captcha">
-        <label id="captcha-label"></label>
-        <input type="text" id="captcha-input" placeholder="Digite o resultado" required />
-      </div>
+    <!-- TELA DE CADASTRO -->
+    <div class="form-box hidden" id="registerBox">
+      <h2>Cadastrar</h2>
+      <form id="registerForm">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" id="regEmail" placeholder="Digite seu email" required />
+        </div>
+        <div class="input-group">
+          <label>Senha</label>
+          <input type="password" id="regPassword" placeholder="Crie uma senha" required />
+          <div id="passwordStrength"></div>
+        </div>
+        <div class="input-group">
+          <label>Confirmar senha</label>
+          <input type="password" id="confirmPassword" placeholder="Repita a senha" required />
+        </div>
+        <div class="g-recaptcha" data-sitekey=""></div>
+        <p id="registerError" class="error"></p>
+        <button type="submit">Cadastrar</button>
+      </form>
+      <p>Já tem conta? <a href="#" id="toLogin">Entrar</a></p>
+    </div>
 
-      <p id="error-message"></p>
-
-      <button type="submit">Entrar</button>
-    </form>
-
-    <p class="register-text">Não tem conta? <a href="#">Cadastre-se</a></p>
   </div>
 
   <script src="script.js"></script>
