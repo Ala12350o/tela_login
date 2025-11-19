@@ -2,61 +2,42 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login e Cadastro</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- reCAPTCHA v2 -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <title>Sistema com JSON Server</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
+<div id="login" class="card">
+  <h2>Login</h2>
+  <input type="email" id="loginEmail" placeholder="Email">
+  <input type="password" id="loginSenha" placeholder="Senha">
+  <button onclick="fazerLogin()">Entrar</button>
+  <p style="text-align:center;">ou</p>
+  <button onclick="mostrarCadastro()">Criar Conta</button>
+  <p id="loginErro" style="color:red;"></p>
+</div>
 
-    <!-- TELA DE LOGIN -->
-    <div class="form-box" id="loginBox">
-      <h2>Entrar</h2>
-      <form id="loginForm">
-        <div class="input-group">
-          <label>Email</label>
-          <input type="email" id="loginEmail" placeholder="Digite seu email" required />
-        </div>
-        <div class="input-group">
-          <label>Senha</label>
-          <input type="password" id="loginPassword" placeholder="Digite sua senha" required />
-        </div>
-        <div class="g-recaptcha" data-sitekey="https://www.google.com/recaptcha/admin/create"></div>
-        <p id="loginError" class="error"></p>
-        <button type="submit">Entrar</button>
-      </form>
-      <p>Não tem conta? <a href="#" id="toRegister">Cadastre-se</a></p>
-    </div>
+<div id="cadastro" class="card" style="display:none;">
+  <h2>Cadastro</h2>
+  <input type="email" id="cadEmail" placeholder="Email">
+  <input type="password" id="cadSenha" placeholder="Senha">
+  <button onclick="fazerCadastro()">Cadastrar</button>
+  <button onclick="mostrarLogin()">Voltar</button>
+  <p id="cadErro" style="color:red;"></p>
+</div>
 
-    <!-- TELA DE CADASTRO -->
-    <div class="form-box hidden" id="registerBox">
-      <h2>Cadastrar</h2>
-      <form id="registerForm">
-        <div class="input-group">
-          <label>Email</label>
-          <input type="email" id="regEmail" placeholder="Digite seu email" required />
-        </div>
-        <div class="input-group">
-          <label>Senha</label>
-          <input type="password" id="regPassword" placeholder="Crie uma senha" required />
-          <div id="passwordStrength"></div>
-        </div>
-        <div class="input-group">
-          <label>Confirmar senha</label>
-          <input type="password" id="confirmPassword" placeholder="Repita a senha" required />
-        </div>
-        <div class="g-recaptcha" data-sitekey=""></div>
-        <p id="registerError" class="error"></p>
-        <button type="submit">Cadastrar</button>
-      </form>
-      <p>Já tem conta? <a href="#" id="toLogin">Entrar</a></p>
-    </div>
+<div id="perfil" class="card" style="display:none;">
+  <h2>Perfil</h2>
+  <img id="fotoPerfil">
+  <p><strong>Nome:</strong> <span id="nomePerfil"></span></p>
+  <p><strong>Idade:</strong> <span id="idadePerfil"></span></p>
+  <p><strong>Rua:</strong> <span id="ruaPerfil"></span></p>
+  <p><strong>Bairro:</strong> <span id="bairroPerfil"></span></p>
+  <p><strong>Cidade:</strong> <span id="cidadePerfil"></span></p>
+  <p><strong>Escola:</strong> <span id="escolaPerfil"></span></p>
+  <p><strong>Ano Letivo:</strong> <span id="anoPerfil"></span></p>
+</div>
 
-  </div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

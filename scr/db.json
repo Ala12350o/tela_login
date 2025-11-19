@@ -1,0 +1,21 @@
+{
+    "login": {
+      "email": "alan@gmail",
+      "password": "123456",
+      "token": "2knMoFeVEak0Cxl"
+    },
+    "perfil": {
+      "nome": "Alan Victor Martins aluno",
+      "idade": 16,
+      "imagem": "foto do alan bonito"
+    },
+    "endereco": {
+      "rua": "rua do milho",
+      "bairro": "homem de bem",
+      "cidade": "Campo largo"
+    },
+    "escolaridade": {
+      "escola": "Otálipo Pereira de Andrade",
+      "ano_letivo": "2025"
+    }
+  }

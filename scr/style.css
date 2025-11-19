@@ -1,90 +1,81 @@
+/* ======== ESTILO GLOBAL ======== */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #4a90e2, #9013fe);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-  
-  .container {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
-    padding: 40px;
-    width: 350px;
-    transition: 0.4s;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .input-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    transition: 0.3s;
-  }
-  
-  input:focus {
-    border-color: #4a90e2;
-    outline: none;
-  }
-  
-  button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background: #4a90e2;
-    color: white;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  button:hover {
-    background: #357abd;
-  }
-  
-  .error {
-    color: red;
-    font-size: 13px;
-    text-align: center;
-    min-height: 16px;
-  }
-  
-  a {
-    color: #4a90e2;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  #passwordStrength {
-    height: 6px;
-    border-radius: 4px;
-    margin-top: 5px;
-    background: #ddd;
-    transition: 0.3s;
-  }
+  margin: 0;
+  background: #f0f2f5;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ======== CARTÕES ======== */
+.card {
+  width: 350px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 25px rgba(0,0,0,0.1);
+  animation: fadein 0.4s ease-in-out;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ======== INPUTS ======== */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 6px #6c63ff33;
+}
+
+/* ======== BOTÕES ======== */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #574fd6;
+}
+
+/* ======== PERFIL ======== */
+#perfil img {
+  display: block;
+  margin: 0 auto 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+#perfil p {
+  font-size: 16px;
+  margin: 5px 0;
+}
