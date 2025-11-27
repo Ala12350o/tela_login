@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <!-- npx json-server --watch db.json --port 3000 comando para iniciar a API-->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="card">
+    <h2>Login</h2>
+
+    <div id="erro" class="erro" style="display:none;">Erro!</div>
+
+    <input type="email" id="email" placeholder="Digite seu email">
+    <input type="password" id="senha" placeholder="Digite sua senha">
+
+    <div class="g-recaptcha"
+         data-sitekey="6LePjxUsAAAAAMnf6JgMVdMvV8_u-oezlhnlNdY7"></div>
+
+    <button onclick="logar()">Entrar</button>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

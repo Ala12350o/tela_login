@@ -1,0 +1,43 @@
+{
+  "usuarios": [
+    {
+      "email": "kelvis@gmail",
+      "senha": "abcdef",
+      "nome": "Kelvis Dobigenski",
+      "idade": 16,
+      "foto": "https://avatars.githubusercontent.com/u/205324759?v=4",
+      "escolaridade": "Ensino Médio Técnico em Desenvolvimento de Sistemas",
+      "endereco": {
+        "rua": "Rua Francisco Gonçalves Fabricio",
+        "bairro": "Bateias",
+        "cidade": "Campo Largo"
+      }
+    },
+    {
+      "email": "alan@gmail",
+      "senha": "123456",
+      "nome": "Alan Victor",
+      "idade": 16,
+      "foto": "https://avatars.githubusercontent.com/u/198127017?v=4",
+      "escolaridade": "Ensino Médio Técnico em Desenvolvimento de Sistemas",
+      "endereco": {
+        "rua": "Rua Francisco Gonçalves Fabricio",
+        "bairro": "Bateias",
+        "cidade": "Campo Largo"
+      }
+    },
+    {
+      "email": "matheus@gmail",
+      "senha": "123abc",
+      "nome": "Matheus Silla",
+      "idade": 16,
+      "foto": "https://avatars.githubusercontent.com/u/205323664?v=4",
+      "escolaridade": "Ensino Médio Técnico em Desenvolvimento de Sistemas",
+      "endereco": {
+        "rua": "Rod. Eng. Ângelo Lopes",
+        "bairro": "Bateias",
+        "cidade": "Campo Largo"
+      }
+    }
+  ]
+}
